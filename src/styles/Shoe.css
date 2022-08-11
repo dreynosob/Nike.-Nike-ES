@@ -1,0 +1,58 @@
+.shoe {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    width: 270px;
+
+  
+  }
+  .shoe:hover{
+    transform: translateY(-6px);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .shoe h1 {
+    margin-top: 0.5rem;
+    font-size: 18px;
+    color: 	#a74707;
+   font-weight: 400;
+  }
+  .shoe h4 {
+    color: grey;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+  }
+  .shoe h5{
+    font-size: 14px;
+    color: black;
+    font-family: "Amazon Ember",Arial,sans-serif;
+  }
+  .shoe p {
+    margin-top: 0.5rem;
+  }
+
+  .shoe img{
+    width: 200px;
+    
+  }
+  .shoe .onSale {
+    color: green;
+  }
+ .shoe .noSale{
+    color: red;
+  }
+  
+  .shoe .price{
+    color: black;
+  }
+  .botones {
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+  }
+
+ 
+  
+
+

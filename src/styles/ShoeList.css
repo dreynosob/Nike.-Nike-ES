@@ -1,0 +1,17 @@
+.shoelist {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 1rem auto;
+    display: grid;
+    gap: 1.8rem;
+  }
+  @media screen and (min-width: 768px) {
+    .shoelist {
+      grid-template-columns: repeat(4, 1fr);
+      
+   
+     
+      align-items: start; 
+    }
+  }
+  
