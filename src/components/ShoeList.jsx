@@ -1,8 +1,8 @@
-import React from 'react';
 import Shoe from './Shoe';
 //CSS
 import '../styles/ShoeList.css'
 const ShoeList = () => {
+    
 
     const shoes = [
         {
