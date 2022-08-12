@@ -5,6 +5,9 @@ import './App.css';
 //Componentes
 import ShoeList from './components/ShoeList';
 import Menu from './components/Nav';
+import Footer from './components/Footer';
+
+
 
 function App() {
   return (
@@ -12,11 +15,14 @@ function App() {
 
       <Menu/>
       <ShoeList></ShoeList>
+      <Footer/>
+ 
 
      
       
     </div>
   );
 }
+
 
 export default App;

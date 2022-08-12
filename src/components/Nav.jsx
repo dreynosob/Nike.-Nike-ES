@@ -8,10 +8,12 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/menu.css'
 import logo from '../imagenes/logo.png';
+import BagDash from './BagDash';
 const Menu = () => {
     return ( 
-      
-      <Navbar bg="muted" expand="lg">
+      <>
+
+<Navbar bg="muted" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#">
           <img src={logo} alt='Logo Nike' className='logoNike'/>
@@ -47,10 +49,16 @@ const Menu = () => {
               aria-label="Search"
             />
             <Button variant="outline-success">Buscar</Button>
+            <BagDash/>
+           
           </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    
+      </>
+      
+    
           
           
      );
