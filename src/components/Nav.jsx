@@ -13,7 +13,7 @@ const Menu = () => {
     return ( 
       <>
 
-<Navbar bg="muted" expand="lg">
+<Navbar bg="muted" expand="lg" className='navBar'>
       <Container fluid>
         <Navbar.Brand href="#">
           <img src={logo} alt='Logo Nike' className='logoNike'/>

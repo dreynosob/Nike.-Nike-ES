@@ -12,7 +12,7 @@ import logoConverse from '../imagenes/logoConverse.png'
 const BeforeNav = () => {
     return (  
         <>  
-         <Navbar bg="light" expand="lg">
+         <Navbar bg="light" expand="lg" className='beforeNav'>
       <Container fluid>
         <Navbar.Brand href="#">
         <img src={logoJordan} alt='Logo Jordan' className='logoJordan'/>

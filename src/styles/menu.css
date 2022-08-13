@@ -1,6 +1,13 @@
  .logoNike{
-    width: 50px;
-    height: 20px;
+    width: 80px;
+    height: 80px;
     padding-bottom: 2px;
     margin-left: 20px;
+   
+}
+
+.navBar{
+    height: 60px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
