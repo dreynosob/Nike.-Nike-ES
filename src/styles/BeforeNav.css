@@ -1,0 +1,25 @@
+.logoJordan{
+    width: 20px;
+    height: 20px;
+    padding-bottom: 2px;
+    margin-left: 20px;
+}
+
+.logoConverse{
+    width: 35px;
+    height: 20px;
+    margin-left: 15px;
+  
+
+}
+
+.navBarLinksRightTop{
+    color: #111;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+a .navBarLinksRightTop:hover{
+    color: grey;
+
+}

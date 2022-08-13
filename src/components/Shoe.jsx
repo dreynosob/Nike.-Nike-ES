@@ -20,7 +20,7 @@ const Shoe = (props) => {
             <h4>{color}</h4>
             <h4 className={onSale === 'Disponible' ? 'onSale' : 'noSale'}>{onSale}</h4>
             <h4 className='price'>{price}</h4>
-            <Button variant={onSale === 'Disponible' ? 'dark' : 'danger'} ref={target} onClick={() => setShow(!show)}>{buy}</Button> <Button variant="link"></Button>
+            <Button variant={onSale === 'Disponible' ? 'dark' :'danger'} ref={target} onClick={() => setShow(!show)} disabled={onSale !== 'Disponible'}>{buy}</Button>
             <Overlay target={target.current} show={show} placement="bottom">
         {(props) => (
           <Tooltip id="overlay-example" {...props}>

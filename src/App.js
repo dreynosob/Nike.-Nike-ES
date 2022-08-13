@@ -6,12 +6,14 @@ import './App.css';
 import ShoeList from './components/ShoeList';
 import Menu from './components/Nav';
 import Footer from './components/Footer';
+import BeforeNav from './components/BeforeNav';
 
 
 
 function App() {
   return (
     <div className="App">
+      <BeforeNav/>
 
       <Menu/>
       <ShoeList></ShoeList>

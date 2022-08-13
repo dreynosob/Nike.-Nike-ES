@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 const BagDash = forwardRef(({
-  color, size, title, ...rest
+  color,size, title, ...rest
 }, ref) => {
   return (
     <svg
@@ -35,6 +35,7 @@ BagDash.defaultProps = {
   color: 'currentColor',
   size: '2.5em',
   title: null,
+  cursor:'pointer'
 };
 
 export default BagDash;
