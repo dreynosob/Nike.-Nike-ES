@@ -1,0 +1,10 @@
+.vid {
+    height: 100vh;
+    margin-top: 10px;
+    align-items: center;
+   text-align: center;
+}  
+.vid iframe {
+  height: 80%;
+  width: 95%;
+}

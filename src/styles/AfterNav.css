@@ -1,4 +1,12 @@
 .AfterNavBar{
-    height: 80px;
+    height: 40px;
     margin-top: 18px;
+}
+
+.NavContent{
+    font-size: 0.7em;
+    margin:auto;
+    text-align: center;
+	
+   
 }

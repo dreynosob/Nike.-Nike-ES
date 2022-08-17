@@ -9,14 +9,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/menu.css'
 import logo from '../imagenes/logo.png';
 import BagDash from './BagDash';
+//Router
+import { Link, NavLink } from 'react-router-dom';
 const Menu = () => {
     return ( 
       <>
 
 <Navbar bg="muted" expand="lg" className='navBar'>
       <Container fluid>
-        <Navbar.Brand href="#">
-          <img src={logo} alt='Logo Nike' className='logoNike'/>
+        <Navbar.Brand href="/">
+        <NavLink to='/Nike.-Nike-ES' activeClassName='active'>
+        <img src={logo} alt='Logo Nike' className='logoNike'/>
+        </NavLink>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -25,8 +29,8 @@ const Menu = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Hombre</Nav.Link>
-            <Nav.Link href="#action2">Mujer</Nav.Link>
+            <Nav.Link href=""><NavLink to='/shoeList' activeClassName='active'>Hombre</NavLink></Nav.Link>
+            <Nav.Link href=""><NavLink to='/shoeListWomen' activeClassName='active'>Mujer</NavLink></Nav.Link>
             <NavDropdown title="Ofertas" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Descuentos para hombre</NavDropdown.Item>
               <NavDropdown.Item href="#action4">

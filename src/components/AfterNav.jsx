@@ -13,7 +13,8 @@ const AfterNavBar = () => {
         <>  
          <Navbar bg="light" expand="lg" className='AfterNavBar'>
       <Container fluid>
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="#" className='NavContent'>
+     
         
      
         </Navbar.Brand>
