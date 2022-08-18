@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Nike.-Nike-ES/static/css/main.41b406b3.css",
-    "main.js": "/Nike.-Nike-ES/static/js/main.1404724d.js",
+    "main.css": "/Nike.-Nike-ES/static/css/main.cb7366c8.css",
+    "main.js": "/Nike.-Nike-ES/static/js/main.d9362c1f.js",
     "static/js/787.eaad36ba.chunk.js": "/Nike.-Nike-ES/static/js/787.eaad36ba.chunk.js",
     "static/media/logo.png": "/Nike.-Nike-ES/static/media/logo.44ab4594c6ab57d2cd74.png",
     "static/media/jordanLogo.png": "/Nike.-Nike-ES/static/media/jordanLogo.7fcab85841508a9d5da1.png",
     "static/media/logoConverse.png": "/Nike.-Nike-ES/static/media/logoConverse.6789e1c5fa60df2fc183.png",
     "static/media/logo.svg": "/Nike.-Nike-ES/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Nike.-Nike-ES/index.html",
-    "main.41b406b3.css.map": "/Nike.-Nike-ES/static/css/main.41b406b3.css.map",
-    "main.1404724d.js.map": "/Nike.-Nike-ES/static/js/main.1404724d.js.map",
+    "main.cb7366c8.css.map": "/Nike.-Nike-ES/static/css/main.cb7366c8.css.map",
+    "main.d9362c1f.js.map": "/Nike.-Nike-ES/static/js/main.d9362c1f.js.map",
     "787.eaad36ba.chunk.js.map": "/Nike.-Nike-ES/static/js/787.eaad36ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.41b406b3.css",
-    "static/js/main.1404724d.js"
+    "static/css/main.cb7366c8.css",
+    "static/js/main.d9362c1f.js"
   ]
 }
