@@ -3,6 +3,11 @@
     position: relative;
     width: 80px;
     height: 80px;
+  
+   
+  }
+  div{
+    text-align: center;
   }
   
   .lds-ring div {

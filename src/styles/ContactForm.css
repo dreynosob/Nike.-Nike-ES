@@ -1,0 +1,56 @@
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border: thin solid #dedede;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  outline: none;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1;
+  background-color: transparent;
+}
+
+textarea {
+  font-family: inherit;
+  resize: none;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  border: 0 none;
+  border-radius: 0.45rem;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem 0 0;
+  display: inline-block;
+  background-color: #eee;
+  color: rgba(0, 0, 0, 0.865);
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1;
+  text-transform: none;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+button,
+input[type="submit"]:hover{
+  transform: translateY(-3px);
+  transition: all 0.3s ease-in-out 0s;
+   color: grey;
+
+}
+.contactForm {
+ 
+  width: 50vw;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

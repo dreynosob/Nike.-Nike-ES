@@ -9,6 +9,9 @@ import '../styles/BeforeNav.css'
 //Imgs
 import logoJordan from '../imagenes/jordanLogo.png';
 import logoConverse from '../imagenes/logoConverse.png'
+
+//Routing
+import { Link, NavLink } from 'react-router-dom';
 const BeforeNav = () => {
     return (  
         <>  
@@ -22,7 +25,7 @@ const BeforeNav = () => {
         <Navbar.Brand href="#">
         <a href='' className='navBarLinksRightTop'>Ayuda |</a>
         <a href=""  className='navBarLinksRightTop'> Únete a nosotros |</a>
-        <a href=""  className='navBarLinksRightTop'> Iniciar sesión</a>
+        <a href='' className='navBarLinksRightTop'><NavLink to='/contactForm' activeClassName='active'> Iniciar sesión</NavLink></a>
         </Navbar.Brand>
 
        

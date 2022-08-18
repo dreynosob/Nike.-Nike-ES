@@ -12,6 +12,7 @@ import AfterNav from './components/AfterNav'
 //Router
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Carousel from './components/Video';
+import ContactForm from './components/ContactForm';
 
 
 
@@ -33,7 +34,9 @@ function App() {
           <ShoeList/>
           <Footer/>
 
-        </>}/>
+        </>
+      }
+      />
          
         <Route exact path='/Nike.-Nike-ES' element={
         <>
@@ -57,6 +60,19 @@ function App() {
         </>
       }
       />
+
+<Route exact path='/contactForm' element={<>
+
+<BeforeNav/>
+<Menu/>
+<AfterNav/> 
+<ContactForm/>
+
+<Footer/>
+
+</>
+}
+/>
    
 
       </Routes>
