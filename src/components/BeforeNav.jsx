@@ -25,7 +25,7 @@ const BeforeNav = () => {
         <Navbar.Brand href="#">
         <a href='' className='navBarLinksRightTop'>Ayuda |</a>
         <a href=""  className='navBarLinksRightTop'> Únete a nosotros |</a>
-        <a href='' className='navBarLinksRightTop'><NavLink to='/contactForm' activeClassName='active'> Iniciar sesión</NavLink></a>
+        <a href='' className='navBarLinksRightTop'><NavLink to='/FormikContact' activeClassName='active'> Iniciar sesión</NavLink></a>
         </Navbar.Brand>
 
        

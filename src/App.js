@@ -13,6 +13,7 @@ import AfterNav from './components/AfterNav'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Carousel from './components/Video';
 import ContactForm from './components/ContactForm';
+import FormikContact from './components/FormikContact'
 
 
 
@@ -61,12 +62,12 @@ function App() {
       }
       />
 
-<Route exact path='/contactForm' element={<>
+<Route exact path='/FormikContact' element={<>
 
 <BeforeNav/>
 <Menu/>
 <AfterNav/> 
-<ContactForm/>
+<FormikContact/>
 
 <Footer/>
 
