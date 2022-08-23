@@ -4,8 +4,8 @@ import React from "react";
 const Message = ({ msg, bgColor }) => {
   let styles = {
     padding: "1rem",
-    marginBottom: "-1em",
-    marginTop: "1em",
+    marginBottom: "1em",
+    marginTop: "0",
     textAlign: "center",
     color: "#fff",
     fontWeight: "bold",

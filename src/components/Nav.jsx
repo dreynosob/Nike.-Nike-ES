@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -12,6 +12,13 @@ import BagDash from './BagDash';
 //Router
 import { Link, NavLink } from 'react-router-dom';
 const Menu = () => {
+  const [show, setShow] = useState(false);
+  const showDropdown = (e)=>{
+    setShow(!show);
+}
+const hideDropdown = e => {
+    setShow(false);
+}
     return ( 
       <>
 

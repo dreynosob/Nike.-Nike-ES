@@ -1,0 +1,9 @@
+.CountrySelect{
+ border: none;
+margin-bottom: 1rem;
+color: grey;
+overflow: hidden;
+text-decoration: underline;
+appearance: none;
+}
+

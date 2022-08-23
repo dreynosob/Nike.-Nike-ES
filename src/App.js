@@ -80,12 +80,10 @@ function App() {
 
 <Route exact path='/RegisterForm' element={<>
  
- <BeforeNav/>
- <Menu/>
- <AfterNav/> 
+ 
  <RegisterForm/>
  
- <Footer/>
+ 
  
  </>
  }

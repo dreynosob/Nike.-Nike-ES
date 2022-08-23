@@ -2,6 +2,13 @@ import React,{useState} from 'react';
 import '../styles/ContactFormik.css'
 import { Formik } from 'formik';
 import Message from './Message';
+import logo from '../imagenes/logo.png';
+import SelectCountry from './SelectCountry';
+import LinksExample from './Alert';
+import { Alert } from 'bootstrap';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { Link, NavLink } from 'react-router-dom';
 
 
 
@@ -17,14 +24,23 @@ const RegisterForm = () => {
     return ( 
 
         <>
+        {formularioEnviado && (
+                <Message msg={'Registro completado con éxito'} bgColor='#198754'/>  
+      
+      
+)}
+<Navbar.Brand>
+        <NavLink to='/Nike.-Nike-ES' activeClassName='active'>
+        <img src={logo} alt='Logo Nike' className='logoNikeForm'/>
+        </NavLink>
+        </Navbar.Brand>
+         
 
 <Formik 
         initialValues={{
             nombre: '',
-            apellidos:'',
-            fecha:'',
             correo: '',
-            contraseña: ''
+            contraseña:''
         }}
         
         validate ={(valores)=>{
@@ -45,7 +61,7 @@ const RegisterForm = () => {
                  errores.correo = 'El correo solo puede conteneder números, letras, puntos, guiones y guion bajo'
  
              }
-
+/*
              //Validación apellido
 
              if(!valores.apellidos){
@@ -62,7 +78,7 @@ const RegisterForm = () => {
             }else if(!/^([0-2][0-9]|3[0-1])(\/|-)(0[1-9]|1[0-2])\2(\d{4})$/.test(valores.fecha)){
                 errores.fecha = 'El formato de la fecha es inválido'
             }
-
+*/
             //validación contraseña
 
             if(!valores.contraseña){
@@ -73,8 +89,13 @@ const RegisterForm = () => {
             return errores;
         }}
            onSubmit={(valores, {resetForm})=> {
-            if(valores !== null){
-               console.log(valores)
+            if(valores.nombre && valores.correo && valores.contraseña !== null){
+                setTimeout(() => {
+                   alert(`${valores.nombre} se ha registrado con éxito`)
+                    
+                }, 4000);
+               
+               
                 
             }
            
@@ -92,11 +113,11 @@ const RegisterForm = () => {
             {( { handleSubmit, errors, touched, values, handleChange, handleBlur } )=>(
                 
                 <form className='contactForm' onSubmit={handleSubmit}>
-                    <h2 className='contactLogin'>¡Registrate!</h2>
-               
+                    <h2 className='contactLogin'>Introduce tu dirección de correo eletrónico para unirte o iniciar sesión.</h2>
+                  <SelectCountry/>
+
                    
                 <div>
-                    
                     <input 
                     type='text' 
                     name='nombre'  
@@ -109,9 +130,12 @@ const RegisterForm = () => {
                   
 
                     {touched.nombre && errors.nombre && <div className='error'>{errors.nombre}</div>}
+                    
                 </div>
-
-                <div>
+           
+                    
+              {/*
+               <div>
                     
                     <input 
                     type='text' 
@@ -126,9 +150,9 @@ const RegisterForm = () => {
 
                     {touched.apellidos && errors.apellidos && <div className='error'>{errors.apellidos}</div>}
                 </div>
+                
 
-
-                <div>
+<div>
                     
                     <input 
                     type='text' 
@@ -143,7 +167,23 @@ const RegisterForm = () => {
 
                     {touched.fecha && errors.fecha && <div className='error'>{errors.fecha}</div>}
                 </div>
+*/}
+               
+                 <div>
+                    
+                    <input 
+                    type='password' 
+                    name='contraseña'  
+                    placeholder='*****' 
+                    value={values.contraseña}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    />
 
+                    {touched.contraseña && errors.contraseña && <div className='error'>{errors.contraseña}</div>}
+                </div> 
+
+                
                 <div>
                    
                     <input 
@@ -160,26 +200,13 @@ const RegisterForm = () => {
                     {touched.correo && errors.correo && <div className='error'>{errors.correo}</div>}
                 </div>
        
-                <div>
-                    
-                    <input 
-                    type='password' 
-                    name='contraseña'  
-                    placeholder='*****' 
-                    value={values.contraseña}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    />
+               
+                <p className='terminosForm'>Al continuar, aceptas los <span>Términos de uso de Nike</span> y confirmas que has leído la <span>Política de privacidad</span> de Nike.</p>
 
-                    {touched.contraseña && errors.contraseña && <div className='error'>{errors.contraseña}</div>}
-                </div>
                 
-                <input type='submit' value='Enviar'/>
-                {formularioEnviado && (
-                <Message msg={'Registro completado con éxito'} bgColor='#198754'/>  
-      
-      
-)}
+                
+                <input type='submit' value='Siguiente' className='enviar'/>
+                
 
 
 
