@@ -1,4 +1,4 @@
-import React from "react"
+import React, {memo} from "react"
 import {FaMapMarkerAlt} from 'react-icons/fa';
 import '../styles/Footer.css'
 

@@ -1,27 +1,28 @@
-
 import React,{useState} from 'react';
 import '../styles/ContactFormik.css'
 import { Formik } from 'formik';
-import Loader from './Loader'
-import { helpHttp } from '../helpers/Helper';
-import { useFormik } from 'formik';
 import Message from './Message';
 
 
 
-//Formulario
 
-const FormikContact = () => {
-   
+
+  //Formulario
+
+const RegisterForm = () => {
+
     const [formularioEnviado, setFormularioEnviado] = useState(false);
+    
+    
+    return ( 
 
-   
-    return (
         <>
 
 <Formik 
         initialValues={{
             nombre: '',
+            apellidos:'',
+            fecha:'',
             correo: '',
             contraseña: ''
         }}
@@ -44,14 +45,36 @@ const FormikContact = () => {
                  errores.correo = 'El correo solo puede conteneder números, letras, puntos, guiones y guion bajo'
  
              }
+
+             //Validación apellido
+
+             if(!valores.apellidos){
+                errores.apellidos = 'Por favor ingrese su apellido'
+             }else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.apellidos)){
+                errores.apellidos = 'El nombre solo puede contener letras y espacios'
+
+            }
+
+            //validacion fecha nacimiento
+
+            if(!valores.fecha){
+                errores.fecha = 'Por favor ingresa su fecha de nacimiento'
+            }else if(!/^([0-2][0-9]|3[0-1])(\/|-)(0[1-9]|1[0-2])\2(\d{4})$/.test(valores.fecha)){
+                errores.fecha = 'El formato de la fecha es inválido'
+            }
+
+            //validación contraseña
+
+            if(!valores.contraseña){
+                errores.contraseña = 'Por favor ingrese una contraseña'
+            }else if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/.test(valores.contraseña)){
+                errores.contraseña = 'La contraseña debe tener al menos 8 caracteres y un máximo de 15, letra mayúscula o minúscula y no debe tener espacios en blanco'
+            }
             return errores;
         }}
            onSubmit={(valores, {resetForm})=> {
-            if(valores.nombre && valores.correo && valores.contraseña !== null){
-                setTimeout(() => {
-                    alert(`${valores.nombre} ha iniciado sesión`)
-                    
-                }, 4000);
+            if(valores !== null){
+               console.log(valores)
                 
             }
            
@@ -69,7 +92,7 @@ const FormikContact = () => {
             {( { handleSubmit, errors, touched, values, handleChange, handleBlur } )=>(
                 
                 <form className='contactForm' onSubmit={handleSubmit}>
-                    <h2 className='contactLogin'>Login</h2>
+                    <h2 className='contactLogin'>¡Registrate!</h2>
                
                    
                 <div>
@@ -86,6 +109,39 @@ const FormikContact = () => {
                   
 
                     {touched.nombre && errors.nombre && <div className='error'>{errors.nombre}</div>}
+                </div>
+
+                <div>
+                    
+                    <input 
+                    type='text' 
+                    name='apellidos'  
+                    placeholder='Apellidos' 
+                    value={values.apellidos}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    
+                    />
+                  
+
+                    {touched.apellidos && errors.apellidos && <div className='error'>{errors.apellidos}</div>}
+                </div>
+
+
+                <div>
+                    
+                    <input 
+                    type='text' 
+                    name='fecha'  
+                    placeholder='Fecha de nacimiento' 
+                    value={values.fecha}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    
+                    />
+                  
+
+                    {touched.fecha && errors.fecha && <div className='error'>{errors.fecha}</div>}
                 </div>
 
                 <div>
@@ -120,43 +176,26 @@ const FormikContact = () => {
                 
                 <input type='submit' value='Enviar'/>
                 {formularioEnviado && (
-                <Loader/>  
+                <Message msg={'Registro completado con éxito'} bgColor='#198754'/>  
       
       
 )}
 
-               
 
 
-               
-               
-               
-              
-              
-                
 
             </form>
-            
-            
-
             )
                 
             }
             
         </Formik>
-     
+       
+        
         
         </>
-    )
-    
-    
-         
-    
-     
-
+     );
 }
-
  
-export default FormikContact;
-
+export default RegisterForm;
 

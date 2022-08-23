@@ -17,7 +17,7 @@ const Menu = () => {
 
 <Navbar bg="muted" expand="lg" className='navBar'>
       <Container fluid>
-        <Navbar.Brand href="/">
+        <Navbar.Brand>
         <NavLink to='/Nike.-Nike-ES' activeClassName='active'>
         <img src={logo} alt='Logo Nike' className='logoNike'/>
         </NavLink>
@@ -29,19 +29,19 @@ const Menu = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href=""><NavLink to='/shoeList' activeClassName='active'>Hombre</NavLink></Nav.Link>
-            <Nav.Link href=""><NavLink to='/shoeListWomen' activeClassName='active'>Mujer</NavLink></Nav.Link>
+            <Nav.Link><NavLink to='/shoeList' activeClassName='active'>Hombre</NavLink></Nav.Link>
+            <Nav.Link ><NavLink to='/shoeListWomen' activeClassName='active'>Mujer</NavLink></Nav.Link>
             <NavDropdown title="Ofertas" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Descuentos para hombre</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
+              <NavDropdown.Item>Descuentos para hombre</NavDropdown.Item>
+              <NavDropdown.Item>
               Descuentos para mujer
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
+              <NavDropdown.Item>
               Descuentos para niño/a
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
+            <Nav.Link disabled>
               Colecciones
             </Nav.Link>
           </Nav>

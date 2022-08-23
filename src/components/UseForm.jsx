@@ -7,6 +7,7 @@ const UseForm = (initialForm, validateForm) => {
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
     const [response, setResponse] = useState(null);
+    const [name, setName] = useState(initialForm.name);
 
     
     const handleChange = (e)=>{
@@ -29,7 +30,6 @@ const UseForm = (initialForm, validateForm) => {
     setErrors(validateForm(form));
 
     if (Object.keys(errors).length === 0) {
-      alert("Enviando Formulario");
       setLoading(true);
       helpHttp()
         .post("https://formsubmit.co/ajax/darlynreynoso74@gmail.com", {

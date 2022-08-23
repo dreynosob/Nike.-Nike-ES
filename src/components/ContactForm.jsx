@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Loader from './Loader';
 import Message from './Message';
 import UseForm from './UseForm';
@@ -48,6 +48,10 @@ let styles = {
 
 
 const ContactForm = () => {
+ 
+
+  
+
 
     const {
         form, 
@@ -57,13 +61,20 @@ const ContactForm = () => {
         handleChange, 
         handleBlur, 
         handleSubmit
-    } = UseForm(initialForm, validationsForm)
+    } = UseForm(initialForm, validationsForm);
+   
+
+
     return ( 
         <>
+        
         <h2 className='contactForm'>Login</h2>
         {loading && <Loader />}
 
         <form onSubmit={handleSubmit} className='contactForm'>
+          
+          
+          
 
             <input
               type='text'
@@ -98,16 +109,19 @@ const ContactForm = () => {
               required
               />
                {errors.password && <p style={styles}>{errors.password}</p>}
+               
 
             
 
 
               <input type='submit' value='Enviar'/>
+              
 
         </form>
       
       {response && (
-       <Message msg="Ha iniciado sesión" bgColor="#198754" />
+      
+       <Message msg={'Has iniciado sesión'} bgColor="#198754" />
       )}
       
         </>

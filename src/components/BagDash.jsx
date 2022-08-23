@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, memo } from 'react';
 import PropTypes from 'prop-types';
 
 const BagDash = forwardRef(({

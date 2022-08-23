@@ -1,5 +1,5 @@
 //Components
-import React from 'react';
+import React, {memo} from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 //Boostrap
@@ -23,9 +23,10 @@ const BeforeNav = () => {
         </Navbar.Brand>
 
         <Navbar.Brand href="#">
-        <a href='' className='navBarLinksRightTop'>Ayuda |</a>
-        <a href=""  className='navBarLinksRightTop'> Únete a nosotros |</a>
-        <a href='' className='navBarLinksRightTop'><NavLink to='/FormikContact' activeClassName='active'> Iniciar sesión</NavLink></a>
+          
+        <NavLink to='/FormikContact' className='navBarLinksRightTop' activeClassName='active'>  Ayuda |</NavLink>
+       <NavLink to='/RegisterForm' className='navBarLinksRightTop' activeClassName='active'>  Únete a nosotros |</NavLink>
+       <NavLink to='/FormikContact' className='navBarLinksRightTop' activeClassName='active'> Iniciar sesión</NavLink>
         </Navbar.Brand>
 
        
@@ -39,3 +40,5 @@ const BeforeNav = () => {
 }
  
 export default BeforeNav;
+//Memo nos evita que nuestro componente se renderice una y otra vez, 
+//Esto mejorará el rendimiento de nuestra app

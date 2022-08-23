@@ -10,10 +10,11 @@ import Footer from './components/Footer';
 import BeforeNav from './components/BeforeNav';
 import AfterNav from './components/AfterNav'
 //Router
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import {BrowserRouter as Router, HashRouter, Route, Routes} from 'react-router-dom'
 import Carousel from './components/Video';
 import ContactForm from './components/ContactForm';
-import FormikContact from './components/FormikContact'
+import FormikContact from './components/FormikContact';
+import RegisterForm from './components/RegisterForm';
 
 
 
@@ -26,6 +27,7 @@ function App() {
   
     
       <Routes>
+        
         
         <Route exact path='/shoeList' element={<>
 
@@ -63,7 +65,7 @@ function App() {
       />
 
 <Route exact path='/FormikContact' element={<>
-
+ 
 <BeforeNav/>
 <Menu/>
 <AfterNav/> 
@@ -74,6 +76,20 @@ function App() {
 </>
 }
 />
+
+
+<Route exact path='/RegisterForm' element={<>
+ 
+ <BeforeNav/>
+ <Menu/>
+ <AfterNav/> 
+ <RegisterForm/>
+ 
+ <Footer/>
+ 
+ </>
+ }
+ />
    
 
       </Routes>
