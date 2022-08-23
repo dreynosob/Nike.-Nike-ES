@@ -10,15 +10,9 @@ import '../styles/menu.css'
 import logo from '../imagenes/logo.png';
 import BagDash from './BagDash';
 //Router
-import { Link, NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 const Menu = () => {
-  const [show, setShow] = useState(false);
-  const showDropdown = (e)=>{
-    setShow(!show);
-}
-const hideDropdown = e => {
-    setShow(false);
-}
+
     return ( 
       <>
 
