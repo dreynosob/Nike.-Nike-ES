@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import '../styles/ContactFormik.css'
+
 import { Formik } from 'formik';
 import Message from './Message';
 import logo from '../imagenes/logo.png';

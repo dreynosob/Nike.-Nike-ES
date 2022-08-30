@@ -118,7 +118,7 @@ const FormikContact = () => {
                     {touched.contraseña && errors.contraseña && <div className='error'>{errors.contraseña}</div>}
                 </div>
                 
-                <input type='submit' value='Enviar' style={{width:'30vw'}}/>
+                <input type='submit' value='Enviar' className='enviar'/>
                 {formularioEnviado && (
                 <Loader/>  
       
